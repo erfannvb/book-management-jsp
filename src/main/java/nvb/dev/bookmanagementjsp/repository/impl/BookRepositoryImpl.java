@@ -2,7 +2,7 @@ package nvb.dev.bookmanagementjsp.repository.impl;
 
 import nvb.dev.bookmanagementjsp.connection.JdbcConnection;
 import nvb.dev.bookmanagementjsp.entity.Book;
-import nvb.dev.bookmanagementjsp.repository.JdbcRepository;
+import nvb.dev.bookmanagementjsp.repository.BookRepository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -13,7 +13,7 @@ import java.util.List;
 
 import static nvb.dev.bookmanagementjsp.repository.JdbcQueries.*;
 
-public class JdbcRepositoryImpl implements JdbcRepository {
+public class BookRepositoryImpl implements BookRepository {
 
     private static final String CONNECTION_ERROR = "Error getting the connection.";
 

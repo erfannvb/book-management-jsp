@@ -4,7 +4,7 @@ import nvb.dev.bookmanagementjsp.entity.Book;
 
 import java.util.List;
 
-public interface JdbcRepository {
+public interface BookRepository {
 
     void addBook(Book book);
 
