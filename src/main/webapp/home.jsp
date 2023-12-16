@@ -27,6 +27,9 @@
             <button type="submit" class="btn btn-primary">Add Book</button>
             <button type="reset" class="btn btn-danger">Cancel</button>
         </div>
+        <div class="mt-3">
+            <p class="text-danger">${error}</p>
+        </div>
     </form>
 </div>
 
