@@ -4,10 +4,7 @@ import nvb.dev.bookmanagementjsp.connection.JdbcConnection;
 import nvb.dev.bookmanagementjsp.entity.Book;
 import nvb.dev.bookmanagementjsp.repository.BookRepository;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -173,7 +170,7 @@ public class BookRepositoryImpl implements BookRepository {
 
     private void closeConnection() {
         try {
-            connection.close();
+            JdbcConnection.closeConnection(connection);
         } catch (SQLException e) {
             throw new IllegalArgumentException(e);
         }
@@ -181,7 +178,7 @@ public class BookRepositoryImpl implements BookRepository {
 
     private void closePreparedStatement() {
         try {
-            preparedStatement.close();
+            JdbcConnection.closePreparedStatement(preparedStatement);
         } catch (SQLException e) {
             throw new IllegalArgumentException(e);
         }
@@ -189,7 +186,7 @@ public class BookRepositoryImpl implements BookRepository {
 
     private void closeResultSet() {
         try {
-            resultSet.close();
+            JdbcConnection.closeResultSet(resultSet);
         } catch (SQLException e) {
             throw new IllegalArgumentException(e);
         }
