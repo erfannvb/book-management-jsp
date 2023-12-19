@@ -34,7 +34,7 @@ public class BookRepositoryImpl implements BookRepository {
 
                 preparedStatement.setString(1, book.getBookName());
                 preparedStatement.setString(2, book.getBookEdition());
-                preparedStatement.setFloat(3, book.getBookPrice());
+                preparedStatement.setDouble(3, book.getBookPrice());
 
                 preparedStatement.execute();
 
@@ -61,7 +61,7 @@ public class BookRepositoryImpl implements BookRepository {
 
                 preparedStatement.setString(1, book.getBookName());
                 preparedStatement.setString(2, book.getBookEdition());
-                preparedStatement.setFloat(3, book.getBookPrice());
+                preparedStatement.setDouble(3, book.getBookPrice());
                 preparedStatement.setLong(4, book.getId());
 
                 preparedStatement.executeUpdate();
@@ -94,7 +94,7 @@ public class BookRepositoryImpl implements BookRepository {
                     book.setId(resultSet.getLong(BOOK_ID));
                     book.setBookName(resultSet.getString(BOOK_NAME));
                     book.setBookEdition(resultSet.getString(BOOK_EDITION));
-                    book.setBookPrice(resultSet.getFloat(BOOK_PRICE));
+                    book.setBookPrice(resultSet.getDouble(BOOK_PRICE));
                     bookList.add(book);
                 }
 
@@ -128,7 +128,7 @@ public class BookRepositoryImpl implements BookRepository {
                     book.setId(resultSet.getLong(BOOK_ID));
                     book.setBookName(resultSet.getString(BOOK_NAME));
                     book.setBookEdition(resultSet.getString(BOOK_EDITION));
-                    book.setBookPrice(resultSet.getFloat(BOOK_PRICE));
+                    book.setBookPrice(resultSet.getDouble(BOOK_PRICE));
                 }
 
             } else {
