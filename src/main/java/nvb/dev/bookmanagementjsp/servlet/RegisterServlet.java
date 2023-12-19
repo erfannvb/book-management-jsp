@@ -38,8 +38,9 @@ public class RegisterServlet extends HttpServlet {
                 getServletContext().getRequestDispatcher("/home.jsp").forward(req, resp);
             } else {
                 bookRepository.addBook(new Book(bookName, bookEdition, Float.parseFloat(bookPrice)));
-                PrintWriter out = resp.getWriter();
-                out.println("<h1>Book Added Successfully!!!</h1>");
+                String successMsg = bookName + " added successfully!!!";
+                req.setAttribute("success", successMsg);
+                getServletContext().getRequestDispatcher("/home.jsp").forward(req, resp);
             }
 
         } catch (Exception e) {
