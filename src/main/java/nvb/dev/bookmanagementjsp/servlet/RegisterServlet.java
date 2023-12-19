@@ -30,18 +30,11 @@ public class RegisterServlet extends HttpServlet {
             String bookEdition = req.getParameter("bookEdition");
             String bookPrice = req.getParameter("bookPrice");
 
-            StringBuilder error = new StringBuilder();
-            if (bookName == null || bookName.isBlank() || bookEdition == null || bookEdition.isBlank() ||
-                    bookPrice == null || bookPrice.isBlank()) {
-                error.append("Fill in blank inputs.");
-                req.setAttribute("error", error.toString());
-                getServletContext().getRequestDispatcher("/home.jsp").forward(req, resp);
-            } else {
-                bookRepository.addBook(new Book(bookName, bookEdition, Float.parseFloat(bookPrice)));
-                String successMsg = bookName + " added successfully!!!";
-                req.setAttribute("success", successMsg);
-                getServletContext().getRequestDispatcher("/home.jsp").forward(req, resp);
-            }
+            bookRepository.addBook(new Book(bookName, bookEdition, Double.parseDouble(bookPrice)));
+
+            String successMsg = bookName + " added successfully!";
+            req.setAttribute("success", successMsg);
+            getServletContext().getRequestDispatcher("/home.jsp").forward(req, resp);
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
