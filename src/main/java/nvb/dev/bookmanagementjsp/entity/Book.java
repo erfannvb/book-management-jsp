@@ -14,9 +14,9 @@ public class Book implements Serializable {
     private Long id;
     private String bookName;
     private String bookEdition;
-    private float bookPrice;
+    private double bookPrice;
 
-    public Book(String bookName, String bookEdition, float bookPrice) {
+    public Book(String bookName, String bookEdition, double bookPrice) {
         this.bookName = bookName;
         this.bookEdition = bookEdition;
         this.bookPrice = bookPrice;
