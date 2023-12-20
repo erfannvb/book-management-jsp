@@ -13,7 +13,7 @@
 
 <div class="container border border-2 w-50 mt-3 p-3">
     <h2 class="text-center">Login</h2>
-    <form action="">
+    <form action="login" method="post">
         <div class="mb-3">
             <label for="username" class="form-label">Username</label>
             <input type="text" class="form-control" id="username" name="username">
