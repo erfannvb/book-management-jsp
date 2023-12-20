@@ -18,6 +18,7 @@
     <div class="mt-3">
         <img src="images/book.jpg" alt="welcome image" class="img-fluid">
     </div>
+    <hr>
     <div class="mt-3 text-center">
         <button id="register-btn" class="btn btn-primary" style="font-size: 17px">Register</button>
         <button id="login-btn" class="btn btn-success" style="font-size: 17px">Login</button>
