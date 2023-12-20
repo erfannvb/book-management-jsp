@@ -41,7 +41,5 @@ Q.idea/sonarlint/securityhotspotstore/9/1/91d1e1b6464c361adce266c5a6bbbc418b1fe1
 Q.idea/sonarlint/securityhotspotstore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0,b\b\bbf202272a96de5cd6b6828ffdc55fb3ce45289c
 w
 G.idea/sonarlint/issuestore/8/8/88a9255124c95bdc913197c120a8d560edc59c8e,a\e\ae9ddf453f55affea2d6b9e3973cac1eb2efb4e1
-q
-Asrc/main/java/nvb/dev/bookmanagementjsp/filter/AddBookFilter.java,9\3\936d743abce0e68472ec1c1880e79a0b85fe5893
 r
 Bsrc/main/java/nvb/dev/bookmanagementjsp/filter/RegisterFilter.java,8\f\8f3e4c7578a30f2cc6d7fa2b02ce6241ecf9b4d4

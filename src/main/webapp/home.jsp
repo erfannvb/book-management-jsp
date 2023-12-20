@@ -28,8 +28,8 @@
             <button type="reset" class="btn btn-danger">Cancel</button>
         </div>
         <div class="mt-3 text-center">
-            <p class="text-success">${success}</p>
-            <p class="text-danger">${error}</p>
+            <p class="text-success" style="font-size: 17px">${success}</p>
+            <p class="text-danger" style="font-size: 17px">${error}</p>
         </div>
     </form>
 </div>
