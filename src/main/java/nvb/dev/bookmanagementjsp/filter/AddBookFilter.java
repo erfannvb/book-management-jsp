@@ -5,8 +5,8 @@ import jakarta.servlet.annotation.WebFilter;
 
 import java.io.IOException;
 
-@WebFilter(filterName = "RegisterFilter", servletNames = "RegisterServlet", urlPatterns = "/register")
-public class RegisterFilter implements Filter {
+@WebFilter(filterName = "RegisterFilter", servletNames = "AddBookServlet", urlPatterns = "/addBook")
+public class AddBookFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
             throws IOException, ServletException {
