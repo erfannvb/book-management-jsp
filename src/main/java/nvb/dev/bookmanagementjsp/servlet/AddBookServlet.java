@@ -11,10 +11,9 @@ import nvb.dev.bookmanagementjsp.repository.BookRepository;
 import nvb.dev.bookmanagementjsp.repository.impl.BookRepositoryImpl;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
-@WebServlet(name = "RegisterServlet", urlPatterns = "/register")
-public class RegisterServlet extends HttpServlet {
+@WebServlet(name = "RegisterServlet", urlPatterns = "/addBook")
+public class AddBookServlet extends HttpServlet {
 
     private BookRepository bookRepository;
     private ObjectMapper objectMapper;
