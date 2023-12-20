@@ -5,14 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home Page</title>
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
 
 <div class="container border border-2 w-50 mt-3 p-3">
-    <h2 class="text-center">Book Management System</h2>
-    <form action="register" method="post">
+    <h2 class="text-center">Add New Book</h2>
+    <form action="addBook" method="post">
         <div class="mb-3">
             <label for="bookName" class="form-label">Book Name</label>
             <input type="text" class="form-control" id="bookName" name="bookName">
