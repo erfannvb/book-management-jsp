@@ -46,6 +46,8 @@ public class RegisterUserServlet extends HttpServlet {
             user.setAge(Integer.parseInt(age));
             user.setPassword(password);
 
+            userRepository.registerUser(user);
+
             String successMsg = username + " registered successfully!";
             req.setAttribute("success", successMsg);
 
