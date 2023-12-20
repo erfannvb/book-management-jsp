@@ -29,6 +29,7 @@
         </div>
         <div class="mt-3 text-center">
             <p class="text-success" style="font-size: 17px">${success}</p>
+            <p class="text-warning" style="font-size: 17px">${jsonBody}</p>
             <p class="text-danger" style="font-size: 17px">${error}</p>
         </div>
     </form>
