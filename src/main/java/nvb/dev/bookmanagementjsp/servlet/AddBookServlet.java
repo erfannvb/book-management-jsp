@@ -12,7 +12,7 @@ import nvb.dev.bookmanagementjsp.repository.impl.BookRepositoryImpl;
 
 import java.io.IOException;
 
-@WebServlet(name = "RegisterServlet", urlPatterns = "/addBook")
+@WebServlet(name = "AddBookServlet", urlPatterns = "/addBook")
 public class AddBookServlet extends HttpServlet {
 
     private BookRepository bookRepository;
@@ -41,6 +41,7 @@ public class AddBookServlet extends HttpServlet {
             book.setBookName(bookName);
             book.setBookEdition(bookEdition);
             book.setBookPrice(Double.parseDouble(bookPrice));
+
             bookRepository.addBook(book);
 
             String successMsg = bookName + " added successfully!";
@@ -49,7 +50,7 @@ public class AddBookServlet extends HttpServlet {
             String bookJson = objectMapper.writeValueAsString(book);
             req.setAttribute("jsonBody", bookJson);
 
-            getServletContext().getRequestDispatcher("/home.jsp").forward(req, resp);
+            getServletContext().getRequestDispatcher("/addBook.jsp").forward(req, resp);
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
