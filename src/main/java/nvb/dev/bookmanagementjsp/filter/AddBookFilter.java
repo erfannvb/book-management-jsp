@@ -5,7 +5,7 @@ import jakarta.servlet.annotation.WebFilter;
 
 import java.io.IOException;
 
-@WebFilter(filterName = "RegisterFilter", servletNames = "AddBookServlet", urlPatterns = "/addBook")
+@WebFilter(filterName = "AddBookFilter", servletNames = "AddBookServlet", urlPatterns = "/addBook")
 public class AddBookFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
@@ -20,7 +20,7 @@ public class AddBookFilter implements Filter {
                 bookPrice == null || bookPrice.isBlank()) {
             error.append("Fill in all the fields.");
             servletRequest.setAttribute("error", error);
-            RequestDispatcher dispatcher = servletRequest.getRequestDispatcher("/home.jsp");
+            RequestDispatcher dispatcher = servletRequest.getRequestDispatcher("/addBook.jsp");
             dispatcher.include(servletRequest, servletResponse);
         } else {
             filterChain.doFilter(servletRequest, servletResponse);
