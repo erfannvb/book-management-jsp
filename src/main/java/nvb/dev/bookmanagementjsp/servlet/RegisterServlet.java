@@ -1,5 +1,6 @@
 package nvb.dev.bookmanagementjsp.servlet;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -15,7 +16,14 @@ import java.io.PrintWriter;
 @WebServlet(name = "RegisterServlet", urlPatterns = "/register")
 public class RegisterServlet extends HttpServlet {
 
-    private final BookRepository bookRepository = new BookRepositoryImpl();
+    private BookRepository bookRepository;
+    private ObjectMapper objectMapper;
+
+    @Override
+    public void init() throws ServletException {
+        bookRepository = new BookRepositoryImpl();
+        objectMapper = new ObjectMapper();
+    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -30,10 +38,18 @@ public class RegisterServlet extends HttpServlet {
             String bookEdition = req.getParameter("bookEdition");
             String bookPrice = req.getParameter("bookPrice");
 
-            bookRepository.addBook(new Book(bookName, bookEdition, Double.parseDouble(bookPrice)));
+            Book book = new Book();
+            book.setBookName(bookName);
+            book.setBookEdition(bookEdition);
+            book.setBookPrice(Double.parseDouble(bookPrice));
+            bookRepository.addBook(book);
 
             String successMsg = bookName + " added successfully!";
             req.setAttribute("success", successMsg);
+
+            String bookJson = objectMapper.writeValueAsString(book);
+            req.setAttribute("jsonBody", bookJson);
+
             getServletContext().getRequestDispatcher("/home.jsp").forward(req, resp);
 
         } catch (Exception e) {
