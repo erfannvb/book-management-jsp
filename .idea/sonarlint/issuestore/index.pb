@@ -1,14 +1,10 @@
 
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-H
-src/main/webapp/home.jsp,6\8\6853166b9553bb500860233db274f93560c021c5
 ]
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
 S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
-t
-Dsrc/main/java/nvb/dev/bookmanagementjsp/servlet/RegisterServlet.java,0\b\0b5a55a66d59f5a97f38cf03b47b44dc64160552
 t
 Dsrc/main/java/nvb/dev/bookmanagementjsp/connection/JdbcConstant.java,1\4\14b33ad7c06b382b1a18f2a95f60c856ecb70b9c
 v
@@ -25,12 +21,6 @@ O
 src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
 Å
 Q.idea/sonarlint/securityhotspotstore/8/8/88a9255124c95bdc913197c120a8d560edc59c8e,9\0\909762385fc6eb20f922a91c6865741308b57f2c
-Å
-Q.idea/sonarlint/securityhotspotstore/6/8/6853166b9553bb500860233db274f93560c021c5,0\2\02ddd1004148876c0fa24b78c7551656b0b6b7bd
-w
-G.idea/sonarlint/issuestore/6/8/6853166b9553bb500860233db274f93560c021c5,9\5\958f1bda7c34a0b9db93cdd4c58380b7a37f5c97
-Å
-Q.idea/sonarlint/securityhotspotstore/0/b/0b5a55a66d59f5a97f38cf03b47b44dc64160552,6\a\6a5585a5bfcd3673c44efe9e400b9c23db7c97e9
 w
 G.idea/sonarlint/issuestore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0,f\0\f0e0f9cec86fe4b939ae22be5264c758801eb28f
 Å
@@ -41,8 +31,6 @@ Q.idea/sonarlint/securityhotspotstore/9/1/91d1e1b6464c361adce266c5a6bbbc418b1fe1
 Q.idea/sonarlint/securityhotspotstore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0,b\b\bbf202272a96de5cd6b6828ffdc55fb3ce45289c
 w
 G.idea/sonarlint/issuestore/8/8/88a9255124c95bdc913197c120a8d560edc59c8e,a\e\ae9ddf453f55affea2d6b9e3973cac1eb2efb4e1
-r
-Bsrc/main/java/nvb/dev/bookmanagementjsp/filter/RegisterFilter.java,8\f\8f3e4c7578a30f2cc6d7fa2b02ce6241ecf9b4d4
 h
 8src/main/java/nvb/dev/bookmanagementjsp/entity/User.java,8\5\85825267a19311a103a0751d706b57b92e6266f9
 v
@@ -73,3 +61,5 @@ u
 Esrc/main/java/nvb/dev/bookmanagementjsp/servlet/LoginUserServlet.java,6\4\64eead93f344517e1b0a7e27b94422bee68b5cb1
 s
 Csrc/main/java/nvb/dev/bookmanagementjsp/filter/LoginUserFilter.java,c\e\ce54dc1b0aac0f28133050f05a131a4727a66a81
+r
+Bsrc/main/java/nvb/dev/bookmanagementjsp/servlet/LogoutServlet.java,3\5\35ccd7cc3ea6b0bf8c2dcb7ed479d8597fe1216d
