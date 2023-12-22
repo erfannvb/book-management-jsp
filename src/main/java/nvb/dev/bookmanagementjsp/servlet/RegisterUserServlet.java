@@ -27,7 +27,6 @@ public class RegisterUserServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
-
             String username = req.getParameter("username");
             String firstName = req.getParameter("firstName");
             String lastName = req.getParameter("lastName");
@@ -50,7 +49,6 @@ public class RegisterUserServlet extends HttpServlet {
             req.setAttribute("jsonBody", userJson);
 
             getServletContext().getRequestDispatcher("/register.jsp").forward(req, resp);
-
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

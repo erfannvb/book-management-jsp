@@ -27,7 +27,6 @@ public class AddBookServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
-
             String bookName = req.getParameter("bookName");
             String bookEdition = req.getParameter("bookEdition");
             String bookPrice = req.getParameter("bookPrice");
@@ -46,7 +45,6 @@ public class AddBookServlet extends HttpServlet {
             req.setAttribute("jsonBody", bookJson);
 
             getServletContext().getRequestDispatcher("/addBook.jsp").forward(req, resp);
-
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

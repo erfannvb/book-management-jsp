@@ -21,22 +21,24 @@ public class LoginUserServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        try {
+            String username = req.getParameter("username");
+            String password = req.getParameter("pwd");
 
-        String username = req.getParameter("username");
-        String password = req.getParameter("pwd");
+            StringBuilder error = new StringBuilder();
 
-        StringBuilder error = new StringBuilder();
-
-        User userByUsernameAndPassword = userRepository.getUserByUsernameAndPassword(username, password);
-        if (userByUsernameAndPassword.getUsername() != null && userByUsernameAndPassword.getPassword() != null) {
-            HttpSession session = req.getSession();
-            session.setAttribute("username", username);
-            resp.sendRedirect("/mainMenu.jsp");
-        } else {
-            error.append("User does not exist!");
-            req.setAttribute("error", error);
-            getServletContext().getRequestDispatcher("/login.jsp").include(req, resp);
+            User userByUsernameAndPassword = userRepository.getUserByUsernameAndPassword(username, password);
+            if (userByUsernameAndPassword.getUsername() != null && userByUsernameAndPassword.getPassword() != null) {
+                HttpSession session = req.getSession();
+                session.setAttribute("username", username);
+                resp.sendRedirect("/mainMenu.jsp");
+            } else {
+                error.append("User does not exist!");
+                req.setAttribute("error", error);
+                getServletContext().getRequestDispatcher("/login.jsp").include(req, resp);
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
-
     }
 }
