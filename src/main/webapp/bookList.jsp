@@ -22,6 +22,7 @@
     List<Book> bookList = bookRepository.getAllBooks();
 
     if (!bookList.isEmpty()) {
+        writer.println("<body>");
         writer.println("<div class='container border border-2 w-50 mt-3 p-3'>");
         writer.println("<h2 class='text-center'>Book List</h2>");
         writer.println("<div class='table-responsive'>");
@@ -41,9 +42,9 @@
             writer.println("<td>" + book.getBookName() + "</td>");
             writer.println("<td>" + book.getBookEdition() + "</td>");
             writer.println("<td>" + book.getBookPrice() + "</td>");
-            writer.println("<td style='text-align: center;'><a href='editBook?id="
+            writer.println("<td style='text-align: center;'><a href='editBook.jsp?id="
                     + book.getId() + "'>Edit</a></td>");
-            writer.println("<td style='text-align: center;'><a href='deleteBook?id="
+            writer.println("<td style='text-align: center;'><a href='deleteBook.jsp?id="
                     + book.getId() + "'>Delete</a></td>");
             writer.println("</tr>");
         }
@@ -55,6 +56,7 @@
         writer.println("<div class='text-center mt-3'>");
         writer.println("<button id='backBtn' type='reset' class='btn btn-danger'>Back</button>");
         writer.println("</div>");
+        writer.println("</body>");
     } else {
         writer.println("<h2 style='color: crimson;'>There is no book in the list !!!</h2>");
     }
