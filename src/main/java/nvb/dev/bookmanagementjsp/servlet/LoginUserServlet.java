@@ -29,8 +29,8 @@ public class LoginUserServlet extends HttpServlet {
 
         User userByUsernameAndPassword = userRepository.getUserByUsernameAndPassword(username, password);
         if (userByUsernameAndPassword.getUsername() != null && userByUsernameAndPassword.getPassword() != null) {
-            Cookie usernameCookie = new Cookie("username", username);
-            resp.addCookie(usernameCookie);
+            HttpSession session = req.getSession();
+            session.setAttribute("username", username);
             resp.sendRedirect("/mainMenu.jsp");
         } else {
             error.append("User does not exist!");
