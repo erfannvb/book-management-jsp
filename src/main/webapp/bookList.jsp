@@ -31,6 +31,8 @@
         writer.println("<th>Book Name</th>");
         writer.println("<th>Book Edition</th>");
         writer.println("<th>Book Price</th>");
+        writer.println("<th>Edit Book</th>");
+        writer.println("<th>Delete Book</th>");
         writer.println("</tr>");
 
         for (Book book : bookList) {
@@ -39,6 +41,10 @@
             writer.println("<td>" + book.getBookName() + "</td>");
             writer.println("<td>" + book.getBookEdition() + "</td>");
             writer.println("<td>" + book.getBookPrice() + "</td>");
+            writer.println("<td style='text-align: center;'><a href='editBook?id="
+                    + book.getId() + "'>Edit</a></td>");
+            writer.println("<td style='text-align: center;'><a href='deleteBook?id="
+                    + book.getId() + "'>Delete</a></td>");
             writer.println("</tr>");
         }
 
