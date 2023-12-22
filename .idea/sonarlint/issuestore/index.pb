@@ -169,3 +169,7 @@ t
 Dsrc/main/java/nvb/dev/bookmanagementjsp/servlet/EditBookServlet.java,6\2\625178f5ae0f7c62af5b1c61e41386147528bbf1
 r
 Bsrc/main/java/nvb/dev/bookmanagementjsp/filter/EditBookFilter.java,2\6\26796796377253a53f25a3ba6c61be75a96b75dd
+v
+Fsrc/main/java/nvb/dev/bookmanagementjsp/servlet/DeleteBookServlet.java,8\9\89dedf6327b907cc38b6d548b960da952eba6953
+N
+src/main/webapp/deleteBook.jsp,1\9\19405a21af3e4d066f9f1aa57ff94d2a4b469b95
