@@ -13,7 +13,8 @@ public class JdbcQueries {
     public static final String DELETE_BOOK_BY_ID = "delete from book where id=?";
 
     // User
-    public static final String INSERT_USER = "insert into users(username, first_name, last_name, age, password) " +
+    public static final String INSERT_USER = "insert into users(username, first_name, last_name," +
+            " age, password) " +
             "values (?,?,?,?,?)";
     public static final String GET_USERNAME_AND_PASSWORD = "select * from users where username=? and password=?";
 
