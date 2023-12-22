@@ -11,8 +11,13 @@
 </head>
 <body>
 
+<%
+    String username = (String) session.getAttribute("username");
+%>
+
 <div class="container border border-2 w-50 mt-3 p-3">
     <h2 class="text-center">Main Menu</h2>
+    <p class="text-center border border-1 rounded-2" style="color: blue">Welcome, <%= username %></p>
     <div class="text-center mt-3">
         <div class="mb-3">
             <button class="btn btn-success" id="addBookBtn">Add New Book</button>
