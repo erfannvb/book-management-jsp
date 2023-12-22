@@ -173,3 +173,5 @@ v
 Fsrc/main/java/nvb/dev/bookmanagementjsp/servlet/DeleteBookServlet.java,8\9\89dedf6327b907cc38b6d548b960da952eba6953
 N
 src/main/webapp/deleteBook.jsp,1\9\19405a21af3e4d066f9f1aa57ff94d2a4b469b95
+L
+src/main/webapp/viewBook.jsp,3\a\3a0c51f852d7ae899d932ed5c1069b636322e448
