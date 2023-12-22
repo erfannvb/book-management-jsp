@@ -37,13 +37,6 @@
     </form>
 </div>
 
-<div class="container border border-1 border-danger w-50 mt-3 p-3 text-center">
-    <form action="logout" method="post">
-        <button class="btn btn-danger" type="submit">Logout</button>
-    </form>
-</div>
-
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
