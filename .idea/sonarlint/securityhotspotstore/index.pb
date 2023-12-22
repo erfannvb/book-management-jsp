@@ -165,3 +165,5 @@ Q.idea/sonarlint/securityhotspotstore/9/0/909762385fc6eb20f922a91c6865741308b57f
 Q.idea/sonarlint/securityhotspotstore/f/0/f0e0f9cec86fe4b939ae22be5264c758801eb28f,f\c\fc51aad2f1ebe72ffedf49fa3dfea24b513ff6fe
 w
 G.idea/sonarlint/issuestore/4/3/439166045b908bdbea05bc026e420d0436ac6834,d\3\d325254606476c52697d3f5f47e32e101a1a2539
+K
+src/main/webapp/js/clock.js,6\e\6e02951c3e3dfeb4c72199ba490cf97f79fbf352
