@@ -65,8 +65,6 @@ r
 Bsrc/main/java/nvb/dev/bookmanagementjsp/servlet/LogoutServlet.java,3\5\35ccd7cc3ea6b0bf8c2dcb7ed479d8597fe1216d
 L
 src/main/webapp/mainMenu.jsp,2\e\2e890901c663963bcbb71586a9dddd6d33d9e0d8
-t
-Dsrc/main/java/nvb/dev/bookmanagementjsp/servlet/MainMenuServlet.java,2\2\225944a27a020561b60d830a433877c1968cda3e
 L
 src/main/webapp/bookList.jsp,1\c\1cb318651a0b26d45abfffd6295a7899ac3922dd
 w
@@ -81,8 +79,6 @@ Q.idea/sonarlint/securityhotspotstore/6/c/6c24d8a7f8640b2c851a7978716ffd663eebb4
 Q.idea/sonarlint/securityhotspotstore/a/e/ae9ddf453f55affea2d6b9e3973cac1eb2efb4e1,e\3\e36d3b35b0aa033dfcf067b2cd16117a306b1e80
 w
 G.idea/sonarlint/issuestore/8/5/85825267a19311a103a0751d706b57b92e6266f9,3\e\3e077eae2b52948d5e5a2a27a9c04f1e72fd63be
-Å
-Q.idea/sonarlint/securityhotspotstore/2/2/225944a27a020561b60d830a433877c1968cda3e,d\e\debf62437c7319d7ed014d819bc73fee10ddebbb
 Å
 Q.idea/sonarlint/securityhotspotstore/8/5/85825267a19311a103a0751d706b57b92e6266f9,2\d\2d3e070f0f70fc4745a1eed5764856ee9fe3d1bd
 w
@@ -167,3 +163,9 @@ w
 G.idea/sonarlint/issuestore/4/3/439166045b908bdbea05bc026e420d0436ac6834,d\3\d325254606476c52697d3f5f47e32e101a1a2539
 K
 src/main/webapp/js/clock.js,6\e\6e02951c3e3dfeb4c72199ba490cf97f79fbf352
+L
+src/main/webapp/editBook.jsp,6\a\6a3f3b6759d71ede7b3541fabb9cca314097ef1b
+t
+Dsrc/main/java/nvb/dev/bookmanagementjsp/servlet/EditBookServlet.java,6\2\625178f5ae0f7c62af5b1c61e41386147528bbf1
+r
+Bsrc/main/java/nvb/dev/bookmanagementjsp/filter/EditBookFilter.java,2\6\26796796377253a53f25a3ba6c61be75a96b75dd
