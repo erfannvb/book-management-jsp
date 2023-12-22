@@ -28,6 +28,7 @@
         </div>
         <div class="text-center">
             <button type="submit" class="btn btn-primary">Add Book</button>
+            <button id="backBtn" type="reset" class="btn btn-danger">Back</button>
         </div>
         <div class="mt-3 text-center">
             <p class="text-success" style="font-size: 17px">${success}</p>
@@ -36,6 +37,12 @@
         </div>
     </form>
 </div>
+
+<script>
+    document.getElementById("backBtn").addEventListener("click", () => {
+        window.location.href = '/mainMenu.jsp';
+    })
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
