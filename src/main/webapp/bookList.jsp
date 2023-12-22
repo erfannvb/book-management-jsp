@@ -21,33 +21,37 @@
     BookRepository bookRepository = new BookRepositoryImpl();
     List<Book> bookList = bookRepository.getAllBooks();
 
-    writer.println("<div class='container border border-2 w-50 mt-3 p-3'>");
-    writer.println("<h2 class='text-center'>Book List</h2>");
-    writer.println("<div class='table-responsive'>");
-    writer.println("<table class='table table-bordered table-striped'>");
-    writer.println("<tr>");
-    writer.println("<th>Book Id</th>");
-    writer.println("<th>Book Name</th>");
-    writer.println("<th>Book Edition</th>");
-    writer.println("<th>Book Price</th>");
-    writer.println("</tr>");
-
-    for (Book book : bookList) {
+    if (!bookList.isEmpty()) {
+        writer.println("<div class='container border border-2 w-50 mt-3 p-3'>");
+        writer.println("<h2 class='text-center'>Book List</h2>");
+        writer.println("<div class='table-responsive'>");
+        writer.println("<table class='table table-bordered table-striped'>");
         writer.println("<tr>");
-        writer.println("<td>" + book.getId() + "</td>");
-        writer.println("<td>" + book.getBookName() + "</td>");
-        writer.println("<td>" + book.getBookEdition() + "</td>");
-        writer.println("<td>" + book.getBookPrice() + "</td>");
+        writer.println("<th>Book Id</th>");
+        writer.println("<th>Book Name</th>");
+        writer.println("<th>Book Edition</th>");
+        writer.println("<th>Book Price</th>");
         writer.println("</tr>");
+
+        for (Book book : bookList) {
+            writer.println("<tr>");
+            writer.println("<td>" + book.getId() + "</td>");
+            writer.println("<td>" + book.getBookName() + "</td>");
+            writer.println("<td>" + book.getBookEdition() + "</td>");
+            writer.println("<td>" + book.getBookPrice() + "</td>");
+            writer.println("</tr>");
+        }
+
+        writer.println("</table>");
+        writer.println("</div>");
+        writer.println("</div>");
+
+        writer.println("<div class='text-center mt-3'>");
+        writer.println("<button id='backBtn' type='reset' class='btn btn-danger'>Back</button>");
+        writer.println("</div>");
+    } else {
+        writer.println("<h2 style='color: crimson;'>There is no book in the list !!!</h2>");
     }
-
-    writer.println("</table>");
-    writer.println("</div>");
-    writer.println("</div>");
-
-    writer.println("<div class='text-center mt-3'>");
-    writer.println("<button id='backBtn' type='reset' class='btn btn-danger'>Back</button>");
-    writer.println("</div>");
 %>
 
 <script>
