@@ -23,7 +23,7 @@
 
     if (!bookList.isEmpty()) {
         writer.println("<body>");
-        writer.println("<div class='container border border-2 w-50 mt-3 p-3'>");
+        writer.println("<div class='container border border-2 w-75 mt-3 p-3'>");
         writer.println("<h2 class='text-center'>Book List</h2>");
         writer.println("<div class='table-responsive'>");
         writer.println("<table class='table table-bordered table-striped'>");
@@ -32,6 +32,7 @@
         writer.println("<th>Book Name</th>");
         writer.println("<th>Book Edition</th>");
         writer.println("<th>Book Price</th>");
+        writer.println("<th>View Book</th>");
         writer.println("<th>Edit Book</th>");
         writer.println("<th>Delete Book</th>");
         writer.println("</tr>");
@@ -42,6 +43,8 @@
             writer.println("<td>" + book.getBookName() + "</td>");
             writer.println("<td>" + book.getBookEdition() + "</td>");
             writer.println("<td>" + book.getBookPrice() + "</td>");
+            writer.println("<td style='text-align: center;'><a href='viewBook.jsp?id="
+                    + book.getId() + "'>View</a></td>");
             writer.println("<td style='text-align: center;'><a href='editBook.jsp?id="
                     + book.getId() + "'>Edit</a></td>");
             writer.println("<td style='text-align: center;'><a href='delete?id="
