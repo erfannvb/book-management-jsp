@@ -31,7 +31,7 @@ public class LoginUserServlet extends HttpServlet {
         if (userByUsernameAndPassword.getUsername() != null && userByUsernameAndPassword.getPassword() != null) {
             Cookie usernameCookie = new Cookie("username", username);
             resp.addCookie(usernameCookie);
-            resp.sendRedirect("/addBook.jsp");
+            resp.sendRedirect("/mainMenu.jsp");
         } else {
             error.append("User does not exist!");
             req.setAttribute("error", error);
