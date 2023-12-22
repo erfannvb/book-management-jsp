@@ -12,8 +12,8 @@ public class LogoutServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
 
-            Cookie[] cookies = req.getCookies();
-            cookies[2].setMaxAge(0);
+            HttpSession session = req.getSession();
+            session.invalidate();
 
             resp.sendRedirect("/welcome.jsp");
 
