@@ -44,7 +44,7 @@
             writer.println("<td>" + book.getBookPrice() + "</td>");
             writer.println("<td style='text-align: center;'><a href='editBook.jsp?id="
                     + book.getId() + "'>Edit</a></td>");
-            writer.println("<td style='text-align: center;'><a href='deleteBook.jsp?id="
+            writer.println("<td style='text-align: center;'><a href='delete?id="
                     + book.getId() + "'>Delete</a></td>");
             writer.println("</tr>");
         }
