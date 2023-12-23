@@ -179,3 +179,21 @@ t
 Dsrc/main/java/nvb/dev/bookmanagementjsp/servlet/UserListServlet.java,9\2\923d61e590957aa5b35b37fd0693c37957972420
 v
 Fsrc/main/java/nvb/dev/bookmanagementjsp/servlet/LogoutUserServlet.java,f\0\f029e4999f9b8cd0f147ecf555d282d60b8ee092
+O
+src/main/webapp/css/welcome.css,b\d\bd44f9466398337d62c66bf91a38eb7c5ab4746d
+O
+src/main/webapp/js/preloader.js,5\0\509e8f8033b81eeb5ad2f6503c0f3a8786d0b8f9
+L
+src/main/webapp/viewUser.jsp,3\5\35d3d86093a1adae91fc57d24a2eec1692761c69
+L
+src/main/webapp/editUser.jsp,6\2\62714dc78a09703be3b3b7335926e0b47f750686
+o
+?src/main/java/nvb/dev/bookmanagementjsp/servlet/DeleteUser.java,c\a\cacbc6dda95c9417b29d86af3d13dae2481d8081
+v
+Fsrc/main/java/nvb/dev/bookmanagementjsp/servlet/DeleteUserServlet.java,2\b\2b607913d42dd7c1fe4d819775cef308ff35038c
+N
+src/main/webapp/deleteUser.jsp,f\8\f802490642b2f7d62287e9419cc7cfec138eabce
+t
+Dsrc/main/java/nvb/dev/bookmanagementjsp/servlet/EditUserServlet.java,6\b\6bfe39c2ec07eb89115145cc330ab058a7b333ad
+r
+Bsrc/main/java/nvb/dev/bookmanagementjsp/filter/EditUserFilter.java,f\1\f1ce626dc1ed5448499c8f68218be1fd165c38a4
