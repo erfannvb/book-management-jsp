@@ -11,12 +11,12 @@
 </head>
 <body onload="realTimeClock()">
 
-<div class="container border border-2 w-50 mt-3 p-3">
+<div class="container border border-2 w-50 mt-2 p-3">
     <div class="text-center">
-        <h1>Book Management System</h1>
+        <h1 style="font-size: 22px">Book Management System</h1>
     </div>
     <div class="mt-3">
-        <img src="images/book.jpg" alt="welcome image" class="img-fluid">
+        <img src="images/book.jpg" alt="welcome image" class="img-fluid rounded rounded-2">
     </div>
     <hr>
     <div class="mt-3 text-center">
@@ -25,9 +25,22 @@
     </div>
     <hr>
     <div class="mt-3">
-        <div id="clock" class="text-center" style="font-size: 20px; font-weight: bold"></div>
+        <div id="clock" class="text-center" style="font-size: 15px; font-weight: bold"></div>
+    </div>
+    <div class="mt-3">
+        <div id="currentDate" class="text-center" style="font-size: 15px; font-weight: bold"></div>
     </div>
 </div>
+
+<script>
+    let date = new Date();
+
+    let year = date.getFullYear();
+    let month = date.getMonth() + 1;
+    let day = date.getDate();
+
+    document.getElementById('currentDate').innerHTML = month + '/' + day + '/' + year;
+</script>
 
 <script src="js/clock.js"></script>
 <script src="js/script.js"></script>
