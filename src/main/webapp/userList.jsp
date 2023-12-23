@@ -16,6 +16,7 @@
     <h2 class="text-center">User List</h2>
     <div class="table-responsive">
         <table class="table table-bordered table-striped table-hover">
+            <caption>A table that shows all the registered users.</caption>
             <tr>
                 <th>ID</th>
                 <th>Username</th>
