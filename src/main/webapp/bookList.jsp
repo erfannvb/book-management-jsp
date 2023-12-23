@@ -23,10 +23,10 @@
 
     if (!bookList.isEmpty()) {
         writer.println("<body>");
-        writer.println("<div class='container border border-2 w-75 mt-3 p-3'>");
+        writer.println("<div class='container border border-2 w-75 mt-5 p-3'>");
         writer.println("<h2 class='text-center'>Book List</h2>");
         writer.println("<div class='table-responsive'>");
-        writer.println("<table class='table table-bordered table-striped'>");
+        writer.println("<table class='table table-bordered table-striped table-hover'>");
         writer.println("<tr>");
         writer.println("<th>Book Id</th>");
         writer.println("<th>Book Name</th>");
