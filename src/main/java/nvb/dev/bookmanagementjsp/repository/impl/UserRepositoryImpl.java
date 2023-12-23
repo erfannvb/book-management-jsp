@@ -58,6 +58,36 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
+    public void updateUser(User user) {
+        try {
+
+            connection = JdbcConnection.getConnection();
+            if (connection != null) {
+
+                preparedStatement = connection.prepareStatement(UPDATE_USER);
+
+                preparedStatement.setString(1, user.getUsername());
+                preparedStatement.setString(2, user.getFirstName());
+                preparedStatement.setString(3, user.getLastName());
+                preparedStatement.setInt(4, user.getAge());
+                preparedStatement.setString(5, user.getPassword());
+                preparedStatement.setLong(6, user.getId());
+
+                preparedStatement.executeUpdate();
+
+            } else {
+                System.out.println(CONNECTION_ERROR);
+            }
+
+        } catch (SQLException e) {
+            throw new IllegalArgumentException(e);
+        } finally {
+            closeConnection();
+            closePreparedStatement();
+        }
+    }
+
+    @Override
     public List<User> getAllUsers() {
         List<User> userList = new ArrayList<>();
         try {
@@ -91,6 +121,41 @@ public class UserRepositoryImpl implements UserRepository {
             closeResultSet();
         }
         return userList;
+    }
+
+    @Override
+    public User getUserById(Long id) {
+        User user = new User();
+        try {
+
+            connection = JdbcConnection.getConnection();
+            if (connection != null) {
+
+                preparedStatement = connection.prepareStatement(GET_USER_BY_ID);
+                preparedStatement.setLong(1, id);
+
+                resultSet = preparedStatement.executeQuery();
+                while (resultSet.next()) {
+                    user.setId(resultSet.getLong(USER_ID));
+                    user.setUsername(resultSet.getString(USER_NAME));
+                    user.setFirstName(resultSet.getString(FIRST_NAME));
+                    user.setLastName(resultSet.getString(LAST_NAME));
+                    user.setAge(resultSet.getInt(AGE));
+                    user.setPassword(resultSet.getString(PASSWORD));
+                }
+
+            } else {
+                System.out.println(CONNECTION_ERROR);
+            }
+
+        } catch (SQLException e) {
+            throw new IllegalArgumentException(e);
+        } finally {
+            closeConnection();
+            closePreparedStatement();
+            closeResultSet();
+        }
+        return user;
     }
 
     @Override
@@ -128,6 +193,30 @@ public class UserRepositoryImpl implements UserRepository {
             closeResultSet();
         }
         return user;
+    }
+
+    @Override
+    public void deleteUserById(Long id) {
+        try {
+
+            connection = JdbcConnection.getConnection();
+            if (connection != null) {
+
+                preparedStatement = connection.prepareStatement(DELETE_USER_BY_ID);
+                preparedStatement.setLong(1, id);
+
+                preparedStatement.executeUpdate();
+
+            } else {
+                System.out.println(CONNECTION_ERROR);
+            }
+
+        } catch (SQLException e) {
+            throw new IllegalArgumentException(e);
+        } finally {
+            closeConnection();
+            closePreparedStatement();
+        }
     }
 
     private void closeConnection() {
