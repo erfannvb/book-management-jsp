@@ -7,7 +7,7 @@ import jakarta.servlet.http.*;
 import java.io.IOException;
 
 @WebServlet(name = "LogoutServlet", urlPatterns = "/logout")
-public class LogoutServlet extends HttpServlet {
+public class LogoutUserServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
