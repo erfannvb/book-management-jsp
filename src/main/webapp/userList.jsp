@@ -23,6 +23,9 @@
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Age</th>
+                <th>View</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>
             <c:forEach items="${userList}" var="user">
                 <tr>
@@ -31,6 +34,9 @@
                     <td><c:out value="${user.firstName}"/></td>
                     <td><c:out value="${user.lastName}"/></td>
                     <td><c:out value="${user.age}"/></td>
+                    <td style="text-align: center;"><a href="viewUser.jsp?id=${user.id}">View</a></td>
+                    <td style="text-align: center;"><a href="editUser.jsp?id=${user.id}">Edit</a></td>
+                    <td style="text-align: center;"><a href="deleteUser?id=${user.id}">Delete</a></td>
                 </tr>
             </c:forEach>
         </table>
