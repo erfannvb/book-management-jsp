@@ -1,0 +1,8 @@
+
+L
+java:S1948"0Make "bookRepository" transient or serializable.(ÊÑÄN8û†À‘É1
+L	java:S106*"+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿ8‡‡À‘É1
+Y
+java:S1128"=Remove this unused import 'jakarta.servlet.http.HttpSession'.(Çê°8³¶Á‘É1
+M
+java:S1128"0Remove this unused import 'java.io.PrintWriter'.(ÓŞÏÛ8ÜÏó‘É1
