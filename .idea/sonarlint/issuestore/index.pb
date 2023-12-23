@@ -61,8 +61,6 @@ u
 Esrc/main/java/nvb/dev/bookmanagementjsp/servlet/LoginUserServlet.java,6\4\64eead93f344517e1b0a7e27b94422bee68b5cb1
 s
 Csrc/main/java/nvb/dev/bookmanagementjsp/filter/LoginUserFilter.java,c\e\ce54dc1b0aac0f28133050f05a131a4727a66a81
-r
-Bsrc/main/java/nvb/dev/bookmanagementjsp/servlet/LogoutServlet.java,3\5\35ccd7cc3ea6b0bf8c2dcb7ed479d8597fe1216d
 L
 src/main/webapp/mainMenu.jsp,2\e\2e890901c663963bcbb71586a9dddd6d33d9e0d8
 L
@@ -175,3 +173,9 @@ N
 src/main/webapp/deleteBook.jsp,1\9\19405a21af3e4d066f9f1aa57ff94d2a4b469b95
 L
 src/main/webapp/viewBook.jsp,3\a\3a0c51f852d7ae899d932ed5c1069b636322e448
+L
+src/main/webapp/userList.jsp,3\5\3540e156123c7a9c77df30d634bd9877f78920cb
+t
+Dsrc/main/java/nvb/dev/bookmanagementjsp/servlet/UserListServlet.java,9\2\923d61e590957aa5b35b37fd0693c37957972420
+v
+Fsrc/main/java/nvb/dev/bookmanagementjsp/servlet/LogoutUserServlet.java,f\0\f029e4999f9b8cd0f147ecf555d282d60b8ee092
