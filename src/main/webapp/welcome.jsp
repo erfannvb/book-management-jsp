@@ -13,7 +13,7 @@
 
 <div class="container border border-2 w-50 mt-2 p-3">
     <div class="text-center">
-        <h1 style="font-size: 22px">Book Management System</h1>
+        <marquee><h1 style="font-size: 22px">Book Management System</h1></marquee>
     </div>
     <div class="mt-3">
         <img src="images/book.jpg" alt="welcome image" class="img-fluid rounded rounded-2">
