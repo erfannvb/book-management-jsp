@@ -21,8 +21,8 @@
 %>
 
 <div class="container border border-2 w-50 mt-3 p-3">
-    <h2 class="text-center">Edit Book</h2>
-    <form action='edit?id=<%= id %>' method="post">
+    <h2 class="text-center">View Book</h2>
+    <form>
         <div class="mb-3">
             <label for="bookName" class="form-label">Book Name</label>
             <input type="text" class="form-control" id="bookName" name="bookName"
