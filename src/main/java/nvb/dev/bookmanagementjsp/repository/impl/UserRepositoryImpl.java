@@ -8,9 +8,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
-import static nvb.dev.bookmanagementjsp.repository.JdbcQueries.GET_USERNAME_AND_PASSWORD;
-import static nvb.dev.bookmanagementjsp.repository.JdbcQueries.INSERT_USER;
+import static nvb.dev.bookmanagementjsp.repository.JdbcQueries.*;
 
 public class UserRepositoryImpl implements UserRepository {
 
@@ -54,6 +55,42 @@ public class UserRepositoryImpl implements UserRepository {
             closeConnection();
             closePreparedStatement();
         }
+    }
+
+    @Override
+    public List<User> getAllUsers() {
+        List<User> userList = new ArrayList<>();
+        try {
+
+            connection = JdbcConnection.getConnection();
+            if (connection != null) {
+
+                preparedStatement = connection.prepareStatement(GET_ALL_USERS);
+
+                resultSet = preparedStatement.executeQuery();
+                while (resultSet.next()) {
+                    User user = new User();
+                    user.setId(resultSet.getLong(USER_ID));
+                    user.setUsername(resultSet.getString(USER_NAME));
+                    user.setFirstName(resultSet.getString(FIRST_NAME));
+                    user.setLastName(resultSet.getString(LAST_NAME));
+                    user.setAge(resultSet.getInt(AGE));
+                    user.setPassword(resultSet.getString(PASSWORD));
+                    userList.add(user);
+                }
+
+            } else {
+                System.out.println(CONNECTION_ERROR);
+            }
+
+        } catch (SQLException e) {
+            throw new IllegalArgumentException(e);
+        } finally {
+            closeConnection();
+            closePreparedStatement();
+            closeResultSet();
+        }
+        return userList;
     }
 
     @Override
