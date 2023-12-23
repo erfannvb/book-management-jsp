@@ -36,7 +36,11 @@
         </div>
         <div class="text-center">
             <button type="submit" class="btn btn-primary">Register</button>
-            <button type="reset" class="btn btn-danger" onclick="history.back()">Cancel</button>
+            <button type="reset" class="btn btn-danger" onclick="window.location.href='/welcome.jsp'">Cancel</button>
+        </div>
+        <hr>
+        <div class="text-center mb-3">
+            <a href="userList" class="link-opacity-75-hover">Show User List</a>
         </div>
         <div class="mt-3 text-center">
             <p class="text-success" style="font-size: 17px">${success}</p>
@@ -44,6 +48,7 @@
             <p class="text-danger" style="font-size: 17px">${error}</p>
         </div>
     </form>
+    <hr>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
