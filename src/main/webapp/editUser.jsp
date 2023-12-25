@@ -19,42 +19,50 @@
     User currentUser = userRepository.getUserById(id);
 %>
 
-<div class="container border border-2 w-50 mt-3 p-3">
-    <h2 class="text-center">Edit User</h2>
-    <form action='editUser?id=<%= id %>' method="post">
-        <div class="mb-3">
-            <label for="username" class="form-label">Username</label>
-            <input type="text" class="form-control" id="username" name="username"
-                   value="<%= currentUser.getUsername() %>">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 mt-3">
+            <div class="card">
+                <div class="card-header text-center fs-3">Edit User</div>
+                <div class="card-body">
+                    <form action='editUser?id=<%= id %>' method="post">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" name="username"
+                                   value="<%= currentUser.getUsername() %>">
+                        </div>
+                        <div class="mb-3">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName"
+                                   value="<%= currentUser.getFirstName() %>">
+                        </div>
+                        <div class="mb-3">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" name="lastName"
+                                   value="<%= currentUser.getLastName() %>">
+                        </div>
+                        <div class="mb-3">
+                            <label for="age" class="form-label">Age</label>
+                            <input type="number" class="form-control" id="age" name="age"
+                                   value="<%= currentUser.getAge() %>">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password"
+                                   value="<%= currentUser.getPassword() %>">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Update User</button>
+                        </div>
+                        <div class="mt-3 text-center">
+                            <p class="text-success" style="font-size: 17px">${success}</p>
+                            <p class="text-danger" style="font-size: 17px">${error}</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="firstName" class="form-label">First Name</label>
-            <input type="text" class="form-control" id="firstName" name="firstName"
-                   value="<%= currentUser.getFirstName() %>">
-        </div>
-        <div class="mb-3">
-            <label for="lastName" class="form-label">Last Name</label>
-            <input type="text" class="form-control" id="lastName" name="lastName"
-                   value="<%= currentUser.getLastName() %>">
-        </div>
-        <div class="mb-3">
-            <label for="age" class="form-label">Age</label>
-            <input type="number" class="form-control" id="age" name="age"
-                   value="<%= currentUser.getAge() %>">
-        </div>
-        <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" name="password"
-                   value="<%= currentUser.getPassword() %>">
-        </div>
-        <div class="text-center">
-            <button type="submit" class="btn btn-primary">Update User</button>
-        </div>
-        <div class="mt-3 text-center">
-            <p class="text-success" style="font-size: 17px">${success}</p>
-            <p class="text-danger" style="font-size: 17px">${error}</p>
-        </div>
-    </form>
+    </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
