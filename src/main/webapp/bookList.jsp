@@ -39,10 +39,10 @@
 
         for (Book book : bookList) {
             writer.println("<tr>");
-            writer.println("<td>" + book.getId() + "</td>");
-            writer.println("<td>" + book.getBookName() + "</td>");
-            writer.println("<td>" + book.getBookEdition() + "</td>");
-            writer.println("<td>" + book.getBookPrice() + "</td>");
+            writer.println("<td style='text-align: center;'>" + book.getId() + "</td>");
+            writer.println("<td style='text-align: center;'>" + book.getBookName() + "</td>");
+            writer.println("<td style='text-align: center;'>" + book.getBookEdition() + "</td>");
+            writer.println("<td style='text-align: center;'>" + book.getBookPrice() + "</td>");
             writer.println("<td style='text-align: center;'><a href='viewBook.jsp?id="
                     + book.getId() + "'>View</a></td>");
             writer.println("<td style='text-align: center;'><a href='editBook.jsp?id="
