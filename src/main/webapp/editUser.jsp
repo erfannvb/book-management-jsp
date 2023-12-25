@@ -25,7 +25,7 @@
             <div class="card">
                 <div class="card-header text-center fs-3">Edit User</div>
                 <div class="card-body">
-                    <form action='editUser?id=<%= id %>' method="post">
+                    <form action='editUser?id=<%= currentUser.getId() %>' method="post">
                         <div class="mb-3">
                             <label for="username" class="form-label">Username</label>
                             <input type="text" class="form-control" id="username" name="username"
