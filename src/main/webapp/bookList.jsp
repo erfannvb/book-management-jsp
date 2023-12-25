@@ -28,13 +28,13 @@
         writer.println("<div class='table-responsive'>");
         writer.println("<table class='table table-bordered table-striped table-hover'>");
         writer.println("<tr>");
-        writer.println("<th>Book Id</th>");
-        writer.println("<th>Book Name</th>");
-        writer.println("<th>Book Edition</th>");
-        writer.println("<th>Book Price</th>");
-        writer.println("<th>View Book</th>");
-        writer.println("<th>Edit Book</th>");
-        writer.println("<th>Delete Book</th>");
+        writer.println("<th style='text-align: center;'>Book Id</th>");
+        writer.println("<th style='text-align: center;'>Book Name</th>");
+        writer.println("<th style='text-align: center;'>Book Edition</th>");
+        writer.println("<th style='text-align: center;'>Book Price</th>");
+        writer.println("<th style='text-align: center;'>View Book</th>");
+        writer.println("<th style='text-align: center;'>Edit Book</th>");
+        writer.println("<th style='text-align: center;'>Delete Book</th>");
         writer.println("</tr>");
 
         for (Book book : bookList) {
