@@ -11,31 +11,39 @@
 </head>
 <body>
 
-<div class="container border border-2 w-50 mt-3 p-3">
-    <h2 class="text-center">Add New Book</h2>
-    <form action="addBook" method="post">
-        <div class="mb-3">
-            <label for="bookName" class="form-label">Book Name</label>
-            <input type="text" class="form-control" id="bookName" name="bookName">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 mt-3">
+            <div class="card">
+                <div class="card-header text-center fs-3">Add New Book</div>
+                <div class="card-body">
+                    <form action="addBook" method="post">
+                        <div class="mb-3">
+                            <label for="bookName" class="form-label">Book Name</label>
+                            <input type="text" class="form-control" id="bookName" name="bookName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="bookEdition" class="form-label">Book Edition</label>
+                            <input type="text" class="form-control" id="bookEdition" name="bookEdition">
+                        </div>
+                        <div class="mb-3">
+                            <label for="bookPrice" class="form-label">Book Price</label>
+                            <input type="text" class="form-control" id="bookPrice" name="bookPrice">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Add Book</button>
+                            <button id="backBtn" type="reset" class="btn btn-danger">Back</button>
+                        </div>
+                        <div class="mt-3 text-center">
+                            <p class="text-success" style="font-size: 17px">${success}</p>
+                            <p class="text-warning" style="font-size: 17px">${jsonBody}</p>
+                            <p class="text-danger" style="font-size: 17px">${error}</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="bookEdition" class="form-label">Book Edition</label>
-            <input type="text" class="form-control" id="bookEdition" name="bookEdition">
-        </div>
-        <div class="mb-3">
-            <label for="bookPrice" class="form-label">Book Price</label>
-            <input type="text" class="form-control" id="bookPrice" name="bookPrice">
-        </div>
-        <div class="text-center">
-            <button type="submit" class="btn btn-primary">Add Book</button>
-            <button id="backBtn" type="reset" class="btn btn-danger">Back</button>
-        </div>
-        <div class="mt-3 text-center">
-            <p class="text-success" style="font-size: 17px">${success}</p>
-            <p class="text-warning" style="font-size: 17px">${jsonBody}</p>
-            <p class="text-danger" style="font-size: 17px">${error}</p>
-        </div>
-    </form>
+    </div>
 </div>
 
 <script>
