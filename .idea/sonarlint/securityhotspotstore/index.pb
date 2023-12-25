@@ -139,8 +139,6 @@ G.idea/sonarlint/issuestore/2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392,1\8\18
 Q.idea/sonarlint/securityhotspotstore/6/4/64eead93f344517e1b0a7e27b94422bee68b5cb1,9\c\9c978635414d2d77b042822d28553d28f2c94349
 Å
 Q.idea/sonarlint/securityhotspotstore/c/e/ce54dc1b0aac0f28133050f05a131a4727a66a81,2\1\2143d8092ab7f76796f218da427897aca3ca6629
-Å
-Q.idea/sonarlint/securityhotspotstore/3/5/35ccd7cc3ea6b0bf8c2dcb7ed479d8597fe1216d,6\0\6068f3ef5deef4877ef20bd8709dccf2a15dbbb1
 w
 G.idea/sonarlint/issuestore/f/0/f0e0f9cec86fe4b939ae22be5264c758801eb28f,5\0\50e216b4439d2538168c3ddca9c0c2fe23bd1c02
 w
@@ -179,16 +177,10 @@ t
 Dsrc/main/java/nvb/dev/bookmanagementjsp/servlet/UserListServlet.java,9\2\923d61e590957aa5b35b37fd0693c37957972420
 v
 Fsrc/main/java/nvb/dev/bookmanagementjsp/servlet/LogoutUserServlet.java,f\0\f029e4999f9b8cd0f147ecf555d282d60b8ee092
-O
-src/main/webapp/css/welcome.css,b\d\bd44f9466398337d62c66bf91a38eb7c5ab4746d
-O
-src/main/webapp/js/preloader.js,5\0\509e8f8033b81eeb5ad2f6503c0f3a8786d0b8f9
 L
 src/main/webapp/viewUser.jsp,3\5\35d3d86093a1adae91fc57d24a2eec1692761c69
 L
 src/main/webapp/editUser.jsp,6\2\62714dc78a09703be3b3b7335926e0b47f750686
-o
-?src/main/java/nvb/dev/bookmanagementjsp/servlet/DeleteUser.java,c\a\cacbc6dda95c9417b29d86af3d13dae2481d8081
 v
 Fsrc/main/java/nvb/dev/bookmanagementjsp/servlet/DeleteUserServlet.java,2\b\2b607913d42dd7c1fe4d819775cef308ff35038c
 N
@@ -255,8 +247,6 @@ w
 G.idea/sonarlint/issuestore/6/2/6248197ca7a44d8bc42b5bd6cd80cd6e99143261,3\a\3a6edaa19b768031af6c9381400d36a19f99cb32
 w
 G.idea/sonarlint/issuestore/6/9/69ddeceee51011d2b466e5303cb6e460e65c8195,2\7\27b4103eb6a9b10794e3c16ef1ab382ae9be1904
-w
-G.idea/sonarlint/issuestore/6/0/6068f3ef5deef4877ef20bd8709dccf2a15dbbb1,d\1\d17bc202bdf310dd84307bbd34e7a20c4fa7957c
 w
 G.idea/sonarlint/issuestore/6/0/606b6cf0f85b4a8b3f14a35574b25751b410290c,3\c\3c439015869def3662dfc9a5ee1edc4bc553dc70
 Å
@@ -363,8 +353,6 @@ Q.idea/sonarlint/securityhotspotstore/2/1/21805a8b57947467971d0c8cf5e08c8a0e39aa
 Q.idea/sonarlint/securityhotspotstore/e/c/ecef2009ecc57972f4f3b9bd8649034cd5874f25,f\c\fc76b329611b635c80b1f24e95782b4e9d7b05a7
 Å
 Q.idea/sonarlint/securityhotspotstore/0/9/098a28d7979fdd246e21bbe3f56a0a50b1cb4e13,f\1\f13279cd6bc8ddf194a001847eb7c8d205c07f21
-Å
-Q.idea/sonarlint/securityhotspotstore/6/0/6068f3ef5deef4877ef20bd8709dccf2a15dbbb1,0\5\05ed83c0557242a791f7d59f76ffe285a65179ef
 Å
 Q.idea/sonarlint/securityhotspotstore/6/0/606b6cf0f85b4a8b3f14a35574b25751b410290c,6\7\678bb6bda56f131c801be88558decf4414f953c1
 Å
