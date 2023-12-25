@@ -18,14 +18,14 @@
         <table class="table table-bordered table-striped table-hover">
             <caption>A table that shows all the registered users.</caption>
             <tr>
-                <th>ID</th>
-                <th>Username</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Age</th>
-                <th>View</th>
-                <th>Edit</th>
-                <th>Delete</th>
+                <th style="text-align: center;">ID</th>
+                <th style="text-align: center;">Username</th>
+                <th style="text-align: center;">First Name</th>
+                <th style="text-align: center;">Last Name</th>
+                <th style="text-align: center;">Age</th>
+                <th style="text-align: center;">View</th>
+                <th style="text-align: center;">Edit</th>
+                <th style="text-align: center;">Delete</th>
             </tr>
             <c:forEach items="${userList}" var="user">
                 <tr>
