@@ -19,30 +19,38 @@
     User currentUser = userRepository.getUserById(id);
 %>
 
-<div class="container border border-2 w-50 mt-3 p-3">
-    <h2 class="text-center">View User</h2>
-    <form>
-        <div class="mb-3">
-            <label for="username" class="form-label">Username</label>
-            <input type="text" class="form-control" id="username" name="username"
-                   value="<%= currentUser.getUsername() %>" readonly>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 mt-3">
+            <div class="card">
+                <div class="card-header text-center fs-3">View User</div>
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" name="username"
+                                   value="<%= currentUser.getUsername() %>" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName"
+                                   value="<%= currentUser.getFirstName() %>" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" name="lastName"
+                                   value="<%= currentUser.getLastName() %>" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="age" class="form-label">Age</label>
+                            <input type="number" class="form-control" id="age" name="age"
+                                   value="<%= currentUser.getAge() %>" readonly>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="firstName" class="form-label">First Name</label>
-            <input type="text" class="form-control" id="firstName" name="firstName"
-                   value="<%= currentUser.getFirstName() %>" readonly>
-        </div>
-        <div class="mb-3">
-            <label for="lastName" class="form-label">Last Name</label>
-            <input type="text" class="form-control" id="lastName" name="lastName"
-                   value="<%= currentUser.getLastName() %>" readonly>
-        </div>
-        <div class="mb-3">
-            <label for="age" class="form-label">Age</label>
-            <input type="number" class="form-control" id="age" name="age"
-                   value="<%= currentUser.getAge() %>" readonly>
-        </div>
-    </form>
+    </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
