@@ -11,25 +11,33 @@
 </head>
 <body>
 
-<div class="container border border-2 w-50 mt-3 p-3">
-    <h2 class="text-center">Login</h2>
-    <form action="login" method="post">
-        <div class="mb-3">
-            <label for="username" class="form-label">Username</label>
-            <input type="text" class="form-control" id="username" name="username">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 mt-3">
+            <div class="card">
+                <div class="card-header text-center fs-3">Login</div>
+                <div class="card-body">
+                    <form action="login" method="post">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" name="username">
+                        </div>
+                        <div class="mb-3">
+                            <label for="pwd" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="pwd" name="pwd">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                            <button type="reset" class="btn btn-danger" onclick="history.back()">Cancel</button>
+                        </div>
+                        <div class="mt-3 text-center">
+                            <p class="text-danger" style="font-size: 17px">${error}</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="pwd" class="form-label">Password</label>
-            <input type="password" class="form-control" id="pwd" name="pwd">
-        </div>
-        <div class="text-center">
-            <button type="submit" class="btn btn-primary">Login</button>
-            <button type="reset" class="btn btn-danger" onclick="history.back()">Cancel</button>
-        </div>
-        <div class="mt-3 text-center">
-            <p class="text-danger" style="font-size: 17px">${error}</p>
-        </div>
-    </form>
+    </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
