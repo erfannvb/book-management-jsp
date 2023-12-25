@@ -20,28 +20,36 @@
     Book currentBook = bookRepository.getBookById(id);
 %>
 
-<div class="container border border-2 w-50 mt-3 p-3">
-    <h2 class="text-center">View Book</h2>
-    <form>
-        <div class="mb-3">
-            <label for="bookName" class="form-label">Book Name</label>
-            <input type="text" class="form-control" id="bookName" name="bookName"
-                   value="<%= currentBook.getBookName() %>" readonly>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 mt-3">
+            <div class="card">
+                <div class="card-header text-center fs-3">View Book</div>
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="bookName" class="form-label">Book Name</label>
+                            <input type="text" class="form-control" id="bookName" name="bookName"
+                                   value="<%= currentBook.getBookName() %>" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="bookEdition" class="form-label">Book Edition</label>
+                            <input type="text" class="form-control" id="bookEdition" name="bookEdition"
+                                   value="<%= currentBook.getBookEdition() %>" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="bookPrice" class="form-label">Book Price</label>
+                            <input type="text" class="form-control" id="bookPrice" name="bookPrice"
+                                   value="<%= currentBook.getBookPrice() %>" readonly>
+                        </div>
+                        <div class="text-center">
+                            <button id="backBtn" type="reset" class="btn btn-danger">Back</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="bookEdition" class="form-label">Book Edition</label>
-            <input type="text" class="form-control" id="bookEdition" name="bookEdition"
-                   value="<%= currentBook.getBookEdition() %>" readonly>
-        </div>
-        <div class="mb-3">
-            <label for="bookPrice" class="form-label">Book Price</label>
-            <input type="text" class="form-control" id="bookPrice" name="bookPrice"
-                   value="<%= currentBook.getBookPrice() %>" readonly>
-        </div>
-        <div class="text-center">
-            <button id="backBtn" type="reset" class="btn btn-danger">Back</button>
-        </div>
-    </form>
+    </div>
 </div>
 
 <script>
