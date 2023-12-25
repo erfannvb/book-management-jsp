@@ -20,33 +20,41 @@
     Book currentBook = bookRepository.getBookById(id);
 %>
 
-<div class="container border border-2 w-50 mt-3 p-3">
-    <h2 class="text-center">Edit Book</h2>
-    <form action='edit?id=<%= id %>' method="post">
-        <div class="mb-3">
-            <label for="bookName" class="form-label">Book Name</label>
-            <input type="text" class="form-control" id="bookName" name="bookName"
-                   value="<%= currentBook.getBookName() %>">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 mt-3">
+            <div class="card">
+                <div class="card-header text-center fs-3">Edit Book</div>
+                <div class="card-body">
+                    <form action='edit?id=<%= id %>' method="post">
+                        <div class="mb-3">
+                            <label for="bookName" class="form-label">Book Name</label>
+                            <input type="text" class="form-control" id="bookName" name="bookName"
+                                   value="<%= currentBook.getBookName() %>">
+                        </div>
+                        <div class="mb-3">
+                            <label for="bookEdition" class="form-label">Book Edition</label>
+                            <input type="text" class="form-control" id="bookEdition" name="bookEdition"
+                                   value="<%= currentBook.getBookEdition() %>">
+                        </div>
+                        <div class="mb-3">
+                            <label for="bookPrice" class="form-label">Book Price</label>
+                            <input type="text" class="form-control" id="bookPrice" name="bookPrice"
+                                   value="<%= currentBook.getBookPrice() %>">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Update Book</button>
+                            <button id="backBtn" type="reset" class="btn btn-danger">Back</button>
+                        </div>
+                        <div class="mt-3 text-center">
+                            <p class="text-success" style="font-size: 17px">${success}</p>
+                            <p class="text-danger" style="font-size: 17px">${error}</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="bookEdition" class="form-label">Book Edition</label>
-            <input type="text" class="form-control" id="bookEdition" name="bookEdition"
-                   value="<%= currentBook.getBookEdition() %>">
-        </div>
-        <div class="mb-3">
-            <label for="bookPrice" class="form-label">Book Price</label>
-            <input type="text" class="form-control" id="bookPrice" name="bookPrice"
-                   value="<%= currentBook.getBookPrice() %>">
-        </div>
-        <div class="text-center">
-            <button type="submit" class="btn btn-primary">Update Book</button>
-            <button id="backBtn" type="reset" class="btn btn-danger">Back</button>
-        </div>
-        <div class="mt-3 text-center">
-            <p class="text-success" style="font-size: 17px">${success}</p>
-            <p class="text-danger" style="font-size: 17px">${error}</p>
-        </div>
-    </form>
+    </div>
 </div>
 
 <script>
