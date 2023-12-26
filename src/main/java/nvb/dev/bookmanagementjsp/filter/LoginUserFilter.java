@@ -2,6 +2,8 @@ package nvb.dev.bookmanagementjsp.filter;
 
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
@@ -11,17 +13,20 @@ public class LoginUserFilter implements Filter {
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
             throws IOException, ServletException {
 
-        String username = servletRequest.getParameter("username");
-        String password = servletRequest.getParameter("pwd");
+        HttpServletRequest request = (HttpServletRequest) servletRequest;
+        HttpServletResponse response = (HttpServletResponse) servletResponse;
+
+        String username = request.getParameter("username");
+        String password = request.getParameter("pwd");
 
         StringBuilder error = new StringBuilder();
         if (username == null || username.isBlank() || password == null || password.isBlank()) {
             error.append("Username / Password is incorrect!");
-            servletRequest.setAttribute("error", error);
-            RequestDispatcher dispatcher = servletRequest.getRequestDispatcher("/login.jsp");
-            dispatcher.include(servletRequest, servletResponse);
+            request.setAttribute("error", error);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/login.jsp");
+            dispatcher.include(request, response);
         } else {
-            filterChain.doFilter(servletRequest, servletResponse);
+            filterChain.doFilter(request, response);
         }
 
     }

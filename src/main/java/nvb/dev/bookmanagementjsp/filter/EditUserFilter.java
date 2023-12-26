@@ -2,6 +2,8 @@ package nvb.dev.bookmanagementjsp.filter;
 
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
@@ -11,22 +13,25 @@ public class EditUserFilter implements Filter {
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
             throws IOException, ServletException {
 
-        String username = servletRequest.getParameter("username");
-        String firstName = servletRequest.getParameter("firstName");
-        String lastName = servletRequest.getParameter("lastName");
-        String age = servletRequest.getParameter("age");
-        String password = servletRequest.getParameter("password");
+        HttpServletRequest request = (HttpServletRequest) servletRequest;
+        HttpServletResponse response = (HttpServletResponse) servletResponse;
+
+        String username = request.getParameter("username");
+        String firstName = request.getParameter("firstName");
+        String lastName = request.getParameter("lastName");
+        String age = request.getParameter("age");
+        String password = request.getParameter("password");
 
         StringBuilder error = new StringBuilder();
         if (username == null || username.isBlank() || firstName == null || firstName.isBlank() ||
                 lastName == null || lastName.isBlank() || age == null || age.isBlank() ||
                 password == null || password.isBlank()) {
             error.append("Fill in all the fields.");
-            servletRequest.setAttribute("error", error);
-            RequestDispatcher dispatcher = servletRequest.getRequestDispatcher("/editUser.jsp");
-            dispatcher.include(servletRequest, servletResponse);
+            request.setAttribute("error", error);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/editUser.jsp");
+            dispatcher.include(request, response);
         } else {
-            filterChain.doFilter(servletRequest, servletResponse);
+            filterChain.doFilter(request, response);
         }
 
     }
